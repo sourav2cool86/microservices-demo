@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_microservices_demo_1687200111240
+  name: Build microservices-demo
+  orgIdentifier: default
+  projectIdentifier: First_Test
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1687200081103
+        repoName: sourav2cool86/microservices-demo
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
