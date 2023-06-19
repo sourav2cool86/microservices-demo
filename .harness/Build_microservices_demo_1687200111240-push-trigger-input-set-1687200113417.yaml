@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_microservices_demo_1687200111240-push-trigger-input-set
+  identifier: Build_microservices_demo_1687200111240pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: First_Test
+  pipeline:
+    identifier: Build_microservices_demo_1687200111240
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
